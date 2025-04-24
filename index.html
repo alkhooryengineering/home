@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Hub</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    body {
+      background: url('https://www.transparenttextures.com/patterns/water.png'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+      background-size: cover;
+      animation: moveBackground 60s linear infinite;
+    }
+
+    @keyframes moveBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+
+    .container {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gear-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+
+    .gear-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    }
+
+    .zone {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .zone:hover {
+      box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
+    }
+
+    .top        { top: 0; left: 50%; transform: translate(-50%, 0); }
+    .top-right  { top: 15%; left: 85%; transform: translate(-50%, -50%); }
+    .right      { top: 50%; left: 100%; transform: translate(-100%, -50%); }
+    .bottom-right { bottom: 15%; left: 85%; transform: translate(-50%, 50%); }
+    .bottom     { bottom: 0; left: 50%; transform: translate(-50%, 0); }
+    .bottom-left { bottom: 15%; left: 15%; transform: translate(-50%, 50%); }
+    .left       { top: 50%; left: 0; transform: translate(0, -50%); }
+    .top-left   { top: 15%; left: 15%; transform: translate(-50%, -50%); }
+
+    h1 {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Engineering Portal</h1>
+    <div class="gear-container">
+      <img src="c86dcc94-f5ec-4941-bfc5-01568e9a386a.png" alt="Gear Icon">
+      <a href="page1.html" class="zone top" title="Top"></a>
+      <a href="page2.html" class="zone top-right" title="Top Right"></a>
+      <a href="page3.html" class="zone right" title="Right"></a>
+      <a href="page4.html" class="zone bottom-right" title="Bottom Right"></a>
+      <a href="page5.html" class="zone bottom" title="Bottom"></a>
+      <a href="page6.html" class="zone bottom-left" title="Bottom Left"></a>
+      <a href="page7.html" class="zone left" title="Left"></a>
+      <a href="page8.html" class="zone top-left" title="Top Left"></a>
+    </div>
+  </div>
+</body>
+</html>
