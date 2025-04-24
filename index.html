@@ -14,8 +14,9 @@
     }
 
     body {
-      background: url('https://www.transparenttextures.com/patterns/water.png'), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+      background: url('https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg'); /* Example sea image */
       background-size: cover;
+      background-position: center;
       animation: moveBackground 60s linear infinite;
     }
 
@@ -66,14 +67,17 @@
       box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
     }
 
-    .top        { top: 0; left: 50%; transform: translate(-50%, 0); }
-    .top-right  { top: 15%; left: 85%; transform: translate(-50%, -50%); }
-    .right      { top: 50%; left: 100%; transform: translate(-100%, -50%); }
-    .bottom-right { bottom: 15%; left: 85%; transform: translate(-50%, 50%); }
-    .bottom     { bottom: 0; left: 50%; transform: translate(-50%, 0); }
-    .bottom-left { bottom: 15%; left: 15%; transform: translate(-50%, 50%); }
-    .left       { top: 50%; left: 0; transform: translate(0, -50%); }
-    .top-left   { top: 15%; left: 15%; transform: translate(-50%, -50%); }
+    /* Positioning for 10 clickable gear zones */
+    .zone1  { top: 5%; left: 50%; transform: translate(-50%, 0); }
+    .zone2  { top: 20%; left: 80%; transform: translate(-50%, -50%); }
+    .zone3  { top: 50%; left: 100%; transform: translate(-100%, -50%); }
+    .zone4  { bottom: 20%; left: 80%; transform: translate(-50%, 50%); }
+    .zone5  { bottom: 5%; left: 50%; transform: translate(-50%, 0); }
+    .zone6  { bottom: 20%; left: 20%; transform: translate(-50%, 50%); }
+    .zone7  { top: 50%; left: 0%; transform: translate(0, -50%); }
+    .zone8  { top: 20%; left: 20%; transform: translate(-50%, -50%); }
+    .zone9  { top: 0; left: 30%; transform: translate(-50%, 0); }
+    .zone10 { top: 0; left: 70%; transform: translate(-50%, 0); }
 
     h1 {
       position: absolute;
@@ -90,15 +94,17 @@
   <div class="container">
     <h1>Engineering Portal</h1>
     <div class="gear-container">
-      <img src="Gear.png" alt="Gear Icon">
-      <a href="https://alkhooryengineering.github.io/ake/" class="zone top" title="Top">AKE Material Form</a>
-      <a href="page2.html" class="zone top-right" title="Top Right">AKE Vehicle Portal</a>
-      <a href="page3.html" class="zone right" title="Right">Projects</a>
-      <a href="page4.html" class="zone bottom-right" title="Bottom Right">Booking</a>
-      <a href="page5.html" class="zone bottom" title="Bottom">Contact</a>
-      <a href="page6.html" class="zone bottom-left" title="Bottom Left">Reports</a>
-      <a href="page7.html" class="zone left" title="Left">Gallery</a>
-      <a href="page8.html" class="zone top-left" title="Top Left">Team</a>
+      <img src="c86dcc94-f5ec-4941-bfc5-01568e9a386a.png" alt="Gear Icon">
+      <a href="page1.html" class="zone zone1">Form A</a>
+      <a href="page2.html" class="zone zone2">Form B</a>
+      <a href="page3.html" class="zone zone3">Projects</a>
+      <a href="page4.html" class="zone zone4">Booking</a>
+      <a href="page5.html" class="zone zone5">Contact</a>
+      <a href="page6.html" class="zone zone6">Reports</a>
+      <a href="page7.html" class="zone zone7">Gallery</a>
+      <a href="page8.html" class="zone zone8">Team</a>
+      <a href="page9.html" class="zone zone9">Tools</a>
+      <a href="page10.html" class="zone zone10">Upload</a>
     </div>
   </div>
 </body>
