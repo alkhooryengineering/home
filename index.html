@@ -61,14 +61,16 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-size: calc(0.5rem + 0.4vw);
+      font-size: clamp(0.45rem, 1.2vw, 0.9rem);
       font-weight: bold;
       transition: box-shadow 0.3s ease;
       transform: translate(-50%, -50%);
-      padding: 0.3em;
+      padding: 0.25em;
       box-sizing: border-box;
       line-height: 1.1;
       word-break: break-word;
+      overflow-wrap: break-word;
+      text-wrap: balance;
     }
 
     .zone:hover {
@@ -103,7 +105,7 @@
       }
 
       .zone {
-        font-size: 0.6rem;
+        font-size: clamp(0.35rem, 2.5vw, 0.7rem);
         padding: 0.2em;
       }
     }
