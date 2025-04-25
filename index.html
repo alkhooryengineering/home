@@ -61,30 +61,30 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-size: 0.75rem;
+      font-size: calc(0.5rem + 0.4vw);
       font-weight: bold;
       transition: box-shadow 0.3s ease;
       transform: translate(-50%, -50%);
+      padding: 0.3em;
+      box-sizing: border-box;
+      line-height: 1.1;
+      word-break: break-word;
     }
 
     .zone:hover {
       box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
     }
 
-
-
-.zone1  { top: -1.49%;  left: 50.15%; }   /* AKE Material Form */
-.zone2  { top: 35.22%;  left: 99.40%; }   /* AKE Vehicles */
-.zone3  { top: 66.87%;  left: 98.51%; }   /* MAHY KHOORY */
-.zone4  { top: 91.64%;  left: 79.70%; }   /* Grundfos S-F */
-.zone5  { top: 101.49%; left: 50.75%; }   /* Contact */
-.zone6  { top: 91.34%;  left: 19.10%; }   /* Projects (AKE) */
-.zone7  { top: 66.57%;  left: 1.49%; }    /* Green Building */
-.zone8  { top: 34.63%;  left: 1.19%; }    /* Swimming Pool */
-.zone9  { top: 7.76%;   left: 19.10%; }   /* Aerator */
-.zone10 { top: 9.85%;   left: 82.99%; }   /* AKE JCR */
-
-
+    .zone1  { top: -1.49%;  left: 50.15%; }
+    .zone2  { top: 35.22%;  left: 99.40%; }
+    .zone3  { top: 66.87%;  left: 98.51%; }
+    .zone4  { top: 91.64%;  left: 79.70%; }
+    .zone5  { top: 101.49%; left: 50.75%; }
+    .zone6  { top: 91.34%;  left: 19.10%; }
+    .zone7  { top: 66.57%;  left: 1.49%; }
+    .zone8  { top: 34.63%;  left: 1.19%; }
+    .zone9  { top: 7.76%;   left: 19.10%; }
+    .zone10 { top: 9.85%;   left: 82.99%; }
 
     h1 {
       position: absolute;
@@ -100,6 +100,11 @@
       h1 {
         font-size: 1.5rem;
         top: 10px;
+      }
+
+      .zone {
+        font-size: 0.6rem;
+        padding: 0.2em;
       }
     }
   </style>
