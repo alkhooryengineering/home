@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Engineering Hub</title>
   <style>
     html, body {
@@ -13,12 +13,13 @@
       overflow: hidden;
     }
 
-    body { 
-  background: url('https://raw.githubusercontent.com/alkhooryengineering/home/main/Water.png');
-  background-size: cover;
-  background-position: center;
-  animation: moveBackground 30s linear infinite;
-}
+    body {
+      background: url('https://raw.githubusercontent.com/alkhooryengineering/home/main/Water.png');
+      background-size: cover;
+      background-position: center;
+      animation: moveBackground 30s linear infinite;
+    }
+
     @keyframes moveBackground {
       50% { background-position: 0 0; }
       100% { background-position: 100% 100%; }
@@ -27,6 +28,7 @@
     .container {
       position: relative;
       height: 100vh;
+      width: 100vw;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -34,8 +36,10 @@
 
     .gear-container {
       position: relative;
-      width: 400px;
-      height: 400px;
+      width: 80vmin;
+      height: 80vmin;
+      max-width: 400px;
+      max-height: 400px;
     }
 
     .gear-container img {
@@ -47,8 +51,8 @@
 
     .zone {
       position: absolute;
-      width: 60px;
-      height: 60px;
+      width: 15%;
+      height: 15%;
       border-radius: 50%;
       border: 2px solid rgba(255, 255, 255, 0.5);
       background-color: rgba(0, 0, 0, 0.3);
@@ -60,23 +64,23 @@
       font-size: 0.75rem;
       font-weight: bold;
       transition: box-shadow 0.3s ease;
+      transform: translate(-50%, -50%);
     }
 
     .zone:hover {
       box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
     }
 
-   /* Adjusted to align with gear teeth angles (approximated) */
-     .zone1  { top: -5px;  left: 168px; } /*ake material form*/
-    .zone2  { top: 118px;  left: 333px; }  /*ake vehicles*/
-    .zone3  { top: 224px; left: 330px; }   /*mahy khoory*/
-    .zone4  { top: 307px; left: 267px; }   /*grundfos sf*/
-    .zone5  { top: 340px; left: 170px; }   /*contact*/
-    .zone6  { top: 306px; left: 64px;  }   /*Projects (AKE)*/
-    .zone7  { top: 223px; left: 5px;  }   /*Green Building*/
-    .zone8  { top: 116px;  left: 4px;  }   /*Swimming Pool*/
-    .zone9  { top: 26px;  left: 64px; }    /*Aerator*/
-    .zone10 { top: 33px;  left: 278px; }    /*AKE JCR*/
+    .zone1  { top: 2.5%;  left: 50%; }
+    .zone2  { top: 30%;  left: 90%; }
+    .zone3  { top: 56%;  left: 90%; }
+    .zone4  { top: 78%;  left: 70%; }
+    .zone5  { top: 92%;  left: 50%; }
+    .zone6  { top: 78%;  left: 20%; }
+    .zone7  { top: 56%;  left: 5%; }
+    .zone8  { top: 30%;  left: 5%; }
+    .zone9  { top: 7%;   left: 20%; }
+    .zone10 { top: 10%;  left: 70%; }
 
     h1 {
       position: absolute;
@@ -86,6 +90,13 @@
       color: white;
       font-size: 2.5rem;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.5rem;
+        top: 10px;
+      }
     }
   </style>
 </head>
@@ -97,7 +108,7 @@
       <a href="https://alkhooryengineering.github.io/ake_material_form/" class="zone zone1">AKE Material Form</a>
       <a href="page2.html" class="zone zone2">AKE Vehicles</a>
       <a href="https://mahykhoory.com/" class="zone zone3">MAHY KHOORY</a>
-      <a href="https://login.grundfos.com/grundfosauth.onmicrosoft.com/b2c_1a_signingf/oauth2/v2.0/authorize?client_id=344defa9-0f8e-442c-8e24-31b5e522b34a&redirect_uri=https%3A%2F%2Fapp.grundfos.com%2Fb2cauth%2F&response_type=code&scope=openid&state=OpenIdConnect.AuthenticationProperties%3DDNzQH7gqDnUW26gAcbISY9MOIdftsJQPMw6aPJjypAea96KLxjMbwuUoQTuDwssxL22lQHDHTAGw0_PXZfTsyJhs8i2nXjWdbrRBvW20XkcdVxcbiRce5857MIb3H8Rlfx0gYKC272o-z5QZSiFcmZ-LXg_3OgJSrLIO_D0pdwM-eAYALA6Hk94TW1bKcNjB9RyDDocIRCkv3cvCJLslw_jNZWpqBFJvwc2lmFInrHXvjEShQn1JurcNyvEvHbuYxw4yVI4U0ILyXLXt69N6UxklAhXe8NgZLkmxqR8fTo29IgYX5BgDzqYmKI1vD63zxpVWtf0uVYOJpTEnY5tOAiZkpMTeqddDk1y-3WmqPOA5Yf6oMbkpniHoSt_tyMktHlIayX9gWLCzRwiPyjHnnM0saIKB4P43gjixMD3sPniL1MiC19Oof54wwWoZPlDw7pp42yDvj9AZpsr6PcwgJiJYKdUYdXF-0xElaU0sMxS0yxEGyk02Szan8eNz8Wlpefs6CCeD0hXZyMvihHS1AF-MU_3fe038zYNTD5_b7mY&response_mode=form_post&nonce=638810801038869477.OTQyODQxODktOWYzNS00YTA1LTg4NTUtMzdjMzg0NzY0MDRjYWFmYThhMzItN2Y4NS00OTY3LThiNmEtODU3MTVmYTkxZTJj&SignupUrl=https%3A%2F%2Fapp.grundfos.com%2Fextranet%2FHomeCtrl&code_challenge=OI4YJNwzwg_-tfFIxXki92rzTA9oo1M13eZCtw8eCVE&code_challenge_method=S256&style=ux" class="zone zone4">Grundfos S-F</a>
+      <a href="https://login.grundfos.com/..." class="zone zone4">Grundfos S-F</a>
       <a href="page5.html" class="zone zone5">Contact</a>
       <a href="page6.html" class="zone zone6">Projects (AKE)</a>
       <a href="page7.html" class="zone zone7">Green Building</a>
